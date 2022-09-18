@@ -5,9 +5,8 @@ import torch
 import torch.nn as nn
 
 #  f = w + x
-
 X = torch.tensor([[1],[2],[3],[4]], dtype=torch.float32)
-Y = torch.tensor([[2],[4],[6],[8]], dtype=torch.float32)
+Y = torch.tensor([[3],[6],[9],[12]], dtype=torch.float32)
 
 X_test = torch.tensor([5], dtype=torch.float32)
 
@@ -37,7 +36,7 @@ print(f'Prediction before training: {model(X_test).item():.3f}')
 
 # Training parameters
 learning_rate = 0.01
-n_iters = 50
+n_iters = 1000
 
 #   Define loss
 loss = nn.MSELoss()

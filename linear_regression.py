@@ -6,8 +6,6 @@
 #       - Update weights
 #   4. Plot predictions
 
-
-# This example trains a XOR function
 import torch
 import torch.nn as nn
 import numpy as np
@@ -49,7 +47,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 for epoch in range(200):
     
         y_predicted = model(X)
-        l = loss(y, y_predicted)
+        l = loss(y_predicted, y)
     
         #   calculate gradients
         l.backward()
